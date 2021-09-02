@@ -23,7 +23,7 @@ def create_app(config_object="myapp.settings"):
         static_folder=join(PROJECT_DIR, "myapp", "static"),
     )
     app.config.from_object(config_object)
-    # app.json_encoder = CustomJSONEncoder
+    app.json_encoder = CustomJSONEncoder
     # register_logging(app)
     # register_extensions(app)
     register_blueprints(app)
